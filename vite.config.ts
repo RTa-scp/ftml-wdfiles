@@ -29,7 +29,7 @@ export default defineConfig({
   plugins: [
     bundledWorker(),
     Vue({
-      include: [/\.vue$/, /\.md$/],
+      include: [/\.vue$/, /\.ftml$/, /\.md$/],
     }),
 
     // https://github.com/antfu/vite-plugin-md
@@ -57,7 +57,7 @@ export default defineConfig({
           baseRoute: "wdfiles",
         },
       ],
-      extensions: ["vue", "md"],
+      extensions: ["vue", "ftml", "md"],
       extendRoute(route) {
         // Get inspired from anthony fu"s personal website
         // https://github.com/antfu/antfu.me
@@ -65,15 +65,15 @@ export default defineConfig({
         const md = readFileSync(path, "utf-8")
         const { data } = matter(md)
         if (path.split(".").pop() == "md") {
-          route.meta = Object.assign(route.meta || {}, { frontmatter: data })
+          route.meta = Object.assign(route.meta || {}, { frontmatter: data})
         }
       },
     }),
 
     // https://github.com/antfu/unplugin-vue-components
     Components({
-      extensions: ["vue", "md"],
-      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      extensions: ["vue", "ftml", "md"],
+      include: [/\.vue$/, /\.vue\?vue/, /\.ftml$/, /\.md$/],
       resolvers: [
         IconsResolver({
           prefix: "",

@@ -23,34 +23,6 @@ export const getArticles = (limit?: number) => {
   return isPosts
 }
 
-// Get the latest article
-export const latestArticle = () => {
-  const frontmatter = getDataRoutes()
-    .filter((data) => data.meta.frontmatter !== undefined)
-    .map((data) => data.meta.frontmatter)
-    .sort((a, b) => +new Date(b.date) - +new Date(a.date))
-  const latestPost: unknown = frontmatter[0]
-  return latestPost
-}
-
-// Filter data to get specific articles based on tags
-export const getArticlesTags = (tags: Array<string>) => {
-  const isPosts = getDataRoutes().filter((data) => Object.keys(data.meta).length !== 0)
-  const filter = isPosts.filter((tag: any) =>
-    tags.every((filter) => tag.meta.frontmatter.tags.includes(filter)),
-  )
-  return filter
-}
-
-// Filter data to get data of search
-export const getArticlesSearch = (tags: Array<string>) => {
-  const isPosts = getDataRoutes().filter((data) => Object.keys(data.meta).length !== 0)
-  const filter = isPosts.filter((tag: any) =>
-    tags.every((filter) => tag.meta.frontmatter.name.includes(filter)),
-  )
-  return filter
-}
-
 // Filter data to get related articles data
 export const getRelatedArticles = ({ limit, tags, name }: RelatedArticles) => {
   const isPosts = getDataRoutes()

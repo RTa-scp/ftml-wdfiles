@@ -6,8 +6,9 @@ import type { DataShare } from "~/types"
 
 import ftmlWorker from '../../module/ftml.web.worker.js?bundled-worker&dataurl';
 
+const { frontmatter, content } = defineProps<{ frontmatter: any, content: any}>()
+console.log(frontmatter, content)
 
-const { frontmatter } = defineProps<{ frontmatter: any }>()
 
 let ftml = new Worker(ftmlWorker, {
   type: 'module',
@@ -27,9 +28,9 @@ let url: string = ""
 if (typeof window !== "undefined") {
   url = window.location.origin + routes
 }
-// console.log(slot)
-</script>
 
+
+</script>
 <template>
   <div class="py-5 px-4">
     <h1
@@ -49,7 +50,7 @@ if (typeof window !== "undefined") {
       class="mt-5 mb-5 text-elucidator-500 divide-y dark:text-elucidator-50"
       style="border-bottom: 1px solid #63c0b6"
     >
-      <slot/>
+    <slot/>
     </div>
   </div>
 </template>
