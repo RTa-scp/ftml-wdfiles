@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "cross-env NODE_ENV=production vite-ssg build",
+    "build": "vite build",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -42,7 +42,7 @@
     "unplugin-icons": "^0.12.23",
     "unplugin-vue-components": "^0.14.13",
     "vite": "^2.8.6",
-    "vite-plugin-md": "^0.6.7",
+    "vite-plugin-md": "0.6.7",
     "vite-plugin-pages": "^0.12.2",
     "vite-plugin-purge-icons": "^0.7.0",
     "vite-plugin-pwa": "^0.8.2",

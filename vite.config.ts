@@ -34,17 +34,13 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-md
     Markdown({
-      headEnabled: true,
       wrapperComponent: "post",
-      markdownItOptions: {
-        html: true,
-        linkify: true,
-        typographer: true,
-      },
-      wrapperClasses: "article-body mb-5",
-      markdownItSetup(md) {},
-    }),
-
+      transforms: {
+        before: (content) => {
+          return encodeURIComponent(content)
+          }
+        }
+      }),
     // https://github.com/hannoeru/vite-plugin-pages
     Pages({
       pagesDir: [
@@ -53,7 +49,7 @@ export default defineConfig({
           baseRoute: "",
         },
         {
-          dir: "wdfiles",
+          dir: "public/wdfiles",
           baseRoute: "wdfiles",
         },
       ],
@@ -74,11 +70,6 @@ export default defineConfig({
     Components({
       extensions: ["vue", "ftml", "md"],
       include: [/\.vue$/, /\.vue\?vue/, /\.ftml$/, /\.md$/],
-      resolvers: [
-        IconsResolver({
-          prefix: "",
-        }),
-      ],
       dts: true,
     }),
 

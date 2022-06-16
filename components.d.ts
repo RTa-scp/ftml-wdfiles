@@ -4,28 +4,11 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Article: typeof import('C:/Users/rikao/github/ftml-wdfiles/src/components/Articles/Article.vue')['default']
-    CarbonBackToTop: typeof import('~icons/carbon/back-to-top')['default']
-    CarbonCalendar: typeof import('~icons/carbon/calendar')['default']
-    CarbonHome: typeof import('~icons/carbon/home')['default']
-    CarbonMenu: typeof import('~icons/carbon/menu')['default']
-    CarbonMoon: typeof import('~icons/carbon/moon')['default']
-    CarbonSearch: typeof import('~icons/carbon/search')['default']
-    CarbonSun: typeof import('~icons/carbon/sun')['default']
-    CarbonTableOfContents: typeof import('~icons/carbon/table-of-contents')['default']
-    CarbonWarningAltFilled: typeof import('~icons/carbon/warning-alt-filled')['default']
-    Footer: typeof import('C:/Users/rikao/Downloads/test/src/components/Footer/Footer.vue')['default']
-    ImageThree: typeof import('C:/Users/rikao/github/ftml-wdfiles/src/components/Image/ImageThree.vue')['default']
-    ImageTwo: typeof import('C:/Users/rikao/github/ftml-wdfiles/src/components/Image/ImageTwo.vue')['default']
-    Latest: typeof import('C:/Users/rikao/Downloads/test/src/components/Articles/Latest.vue')['default']
-    Navbar: typeof import('C:/Users/rikao/Downloads/test/src/components/Navigation/Navbar.vue')['default']
-    Paginate: typeof import('C:/Users/rikao/github/ftml-wdfiles/src/components/Pagination/Paginate.vue')['default']
-    Post: typeof import('C:/Users/rikao/github/ftml-wdfiles/src/components/Articles/Post.vue')['default']
-    Share: typeof import('C:/Users/rikao/Downloads/test/src/components/Button/Share.vue')['default']
-    Tag: typeof import('C:/Users/rikao/Downloads/test/src/components/Button/Tag.vue')['default']
-    ToTopBtn: typeof import('C:/Users/rikao/Downloads/test/src/components/Button/ToTopBtn.vue')['default']
-    UilDocumentLayoutCenter: typeof import('~icons/uil/document-layout-center')['default']
-    UilGithub: typeof import('~icons/uil/github')['default']
+    Article: typeof import('C:/Users/user/Documents/github/ftml-wdfiles/src/components/Articles/Article.vue')['default']
+    ImageThree: typeof import('C:/Users/user/Documents/github/ftml-wdfiles/src/components/Image/ImageThree.vue')['default']
+    ImageTwo: typeof import('C:/Users/user/Documents/github/ftml-wdfiles/src/components/Image/ImageTwo.vue')['default']
+    Paginate: typeof import('C:/Users/user/Documents/github/ftml-wdfiles/src/components/Pagination/Paginate.vue')['default']
+    Post: typeof import('C:/Users/user/Documents/github/ftml-wdfiles/src/components/Articles/Post.vue')['default']
   }
 }
 
