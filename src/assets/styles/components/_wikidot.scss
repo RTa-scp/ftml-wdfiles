@@ -130,3 +130,7 @@ pre.page-source-code {
     white-space: pre-wrap;
     word-break: break-all;
 }
+.code, code {
+    border: 1px dashed #DDD;
+    background-color: #F7F7F7;
+}
