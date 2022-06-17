@@ -3,7 +3,6 @@ import { isClient } from "@vueuse/core"
 import { slug, limitString } from "~/utils"
 import type { DataShare } from "~/types"
 import fm from "front-matter"
-import yaml, { dump } from "js-yaml"
 
 import ftmlWorker from '../../module/ftml.web.worker.js?bundled-worker&dataurl';
 import path from "path/posix";

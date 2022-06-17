@@ -10,6 +10,7 @@ import yaml, { dump } from "js-yaml"
 import AutoImport from "unplugin-auto-import/vite"
 import { resolve } from "path"
 import { readFileSync } from "fs"
+import commonjsExternals from 'vite-plugin-commonjs-externals';
 
 const bundledWorker = require(resolve(__dirname, './plugins/vite-plugin-bundled-worker'));
 
@@ -30,6 +31,7 @@ export default defineConfig({
   },
   plugins: [
     bundledWorker(),
+    commonjsExternals({ externals: require('./external-packages').default }),
     Vue({
       include: [/\.vue$/, /\.ftml$/, /\.md$/],
     }),

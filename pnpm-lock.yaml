@@ -33,6 +33,7 @@ specifiers:
   unplugin-icons: ^0.12.23
   unplugin-vue-components: ^0.14.13
   vite: ^2.8.6
+  vite-plugin-commonjs-externals: ^0.1.1
   vite-plugin-md: 0.6.7
   vite-plugin-pages: ^0.12.2
   vite-plugin-purge-icons: ^0.7.0
@@ -56,6 +57,7 @@ dependencies:
   js-yaml: 4.1.0
   nprogress: 0.2.0
   prism-theme-vars: 0.2.2
+  vite-plugin-commonjs-externals: 0.1.1
   vue: 3.2.31
   vue-disqus: 5.1.0
   vue-router: 4.0.13_vue@3.2.31
@@ -1651,7 +1653,6 @@ packages:
     resolution: {integrity: sha512-V/LGr1APy+PXIwKebEWrkZPwoeoF+w1jiOBUmuxuiUIaOHtob8Qc9BTrYo7VuI5fR8tqsy+buA2WFooR5olqvQ==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-    dev: true
 
   /agent-base/6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
@@ -2444,6 +2445,10 @@ packages:
       is-string: 1.0.7
       isarray: 2.0.5
     dev: true
+
+  /es-module-lexer/0.4.1:
+    resolution: {integrity: sha512-ooYciCUtfw6/d2w56UVeqHPcoCFAiJdz5XOkYpv/Txl1HMUozpXjz/2RIQgqwKdXNDPSF1W7mJCFse3G+HDyAA==}
+    dev: false
 
   /es-to-primitive/1.2.1:
     resolution: {integrity: sha512-QCOllgZJtaUo9miYBcLChTUaHNjJF3PYs1VidD7AwiEj1kYxKeQTctLAezAOH5ZKRH0g2IgPn6KwB4IT8iRpvA==}
@@ -5244,6 +5249,14 @@ packages:
       core-util-is: 1.0.2
       extsprintf: 1.3.0
     dev: true
+
+  /vite-plugin-commonjs-externals/0.1.1:
+    resolution: {integrity: sha512-XRFsdFos/D1Dam0t40qBM+8b1Mrn5vH6aOwaTt8CW5myGx9uKivFXPukP2CsEo6cSukbPlBImsL1voiV6e3o5w==}
+    dependencies:
+      acorn: 8.7.0
+      es-module-lexer: 0.4.1
+      magic-string: 0.25.7
+    dev: false
 
   /vite-plugin-md/0.6.7_vite@2.8.6:
     resolution: {integrity: sha512-R9i61r1y6gfelJKtHiHkw6NOkucFzGRgy7VL7bqMufiSh1UNyYKZrpiQtagzavpBlJSVk34lfEyfyKpQyeuocQ==}

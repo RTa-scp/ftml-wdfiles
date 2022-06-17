@@ -15,6 +15,7 @@
     "js-yaml": "^4.1.0",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.2",
+    "vite-plugin-commonjs-externals": "^0.1.1",
     "vue": "^3.2.31",
     "vue-disqus": "^5.1.0",
     "vue-router": "^4.0.13",
