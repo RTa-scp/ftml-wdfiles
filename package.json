@@ -11,6 +11,7 @@
     "@vscode-ftml/ftml-wasm": "^1.16.2",
     "@vueuse/core": "^6.9.2",
     "@vueuse/head": "^0.5.1",
+    "front-matter": "^4.0.2",
     "frontmatter-markdown-loader": "^3.7.0",
     "js-yaml": "^4.1.0",
     "nprogress": "^0.2.0",
@@ -20,6 +21,7 @@
     "vue-disqus": "^5.1.0",
     "vue-router": "^4.0.13",
     "vue-social-sharing": "^4.0.0-alpha4",
+    "webpack": ">=5.0.0 <6.0.0",
     "workbox-window": "^6.5.0"
   },
   "devDependencies": {

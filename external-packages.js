@@ -8,6 +8,7 @@
 */
 module.exports.external = [
     'front-matter',
+    'js-yaml',
   ];
   
   
