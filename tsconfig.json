@@ -13,9 +13,7 @@
     "forceConsistentCasingInFileNames": true,
     "types": [
       "vite/client",
-      "vite-plugin-pages/client",
-      "vite-plugin-pwa/client",
-      "unplugin-icons/type/vue"
+      "vite-plugin-pages/client"
     ],
     "skipDefaultLibCheck": true,
     "paths": {
