@@ -5,6 +5,8 @@ import Components from "unplugin-vue-components/vite"
 import Markdown from "vite-plugin-md"
 import matter from "gray-matter"
 import IconsResolver from "unplugin-icons/resolver"
+import fm from "front-matter"
+import yaml, { dump } from "js-yaml"
 import AutoImport from "unplugin-auto-import/vite"
 import { resolve } from "path"
 import { readFileSync } from "fs"
@@ -37,7 +39,12 @@ export default defineConfig({
       wrapperComponent: "post",
       transforms: {
         before: (content) => {
-          return encodeURIComponent(content)
+          const res = fm(content)
+          // console.log(res.attributes, res.body)
+          const mdencodecontent = encodeURIComponent(res.body)
+          const mdfrontmatterstr = "---\n"+dump(res.attributes,{forceQuotes: true})+"---\n"
+          const mdcontent = mdfrontmatterstr+mdencodecontent
+          return mdcontent
           }
         }
       }),

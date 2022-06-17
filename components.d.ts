@@ -4,7 +4,6 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    Article: typeof import('C:/Users/user/Documents/github/ftml-wdfiles/src/components/Articles/Article.vue')['default']
     ImageThree: typeof import('C:/Users/user/Documents/github/ftml-wdfiles/src/components/Image/ImageThree.vue')['default']
     ImageTwo: typeof import('C:/Users/user/Documents/github/ftml-wdfiles/src/components/Image/ImageTwo.vue')['default']
     Paginate: typeof import('C:/Users/user/Documents/github/ftml-wdfiles/src/components/Pagination/Paginate.vue')['default']

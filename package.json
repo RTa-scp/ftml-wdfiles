@@ -7,9 +7,12 @@
   },
   "dependencies": {
     "@iconify/iconify": "^2.1.2",
+    "@types/js-yaml": "^4.0.5",
     "@vscode-ftml/ftml-wasm": "^1.16.2",
     "@vueuse/core": "^6.9.2",
     "@vueuse/head": "^0.5.1",
+    "frontmatter-markdown-loader": "^3.7.0",
+    "js-yaml": "^4.1.0",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.2",
     "vue": "^3.2.31",

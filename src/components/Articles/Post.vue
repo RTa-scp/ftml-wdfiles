@@ -2,13 +2,13 @@
 import { isClient } from "@vueuse/core"
 import { slug, limitString } from "~/utils"
 import type { DataShare } from "~/types"
+import fm from "front-matter"
+import yaml, { dump } from "js-yaml"
 
 import ftmlWorker from '../../module/ftml.web.worker.js?bundled-worker&dataurl';
 import path from "path/posix";
 
 const { frontmatter} = defineProps<{ frontmatter: any}>()
-
-console.log(frontmatter)
 
 let ftml = new Worker(ftmlWorker, {
   type: 'module',
@@ -38,8 +38,13 @@ if (typeof window !== "undefined") {
 fetch(url+".md")
 .then(response => response.text())
 .then(data => {
-  const mdcontent = data
-  ftml.postMessage(mdcontent)
+  const { attributes, body } = fm(data)
+  ftml.postMessage(body)
+  document.querySelector("#page-title")!.textContent = attributes.title
+  for (const tag of attributes.tags) {
+    document.querySelector("#main-content > div.page-tags > span")!.innerHTML += `<a href="javascript:;">${tag}</a> `
+  }
+  document.querySelector("#action-area > div > pre")!.textContent = data
 });
 
 

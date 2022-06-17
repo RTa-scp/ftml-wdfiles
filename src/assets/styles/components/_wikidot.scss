@@ -121,3 +121,12 @@ a#account-topbutton:active + div#account-options,
 a#account-topbutton:focus + div#account-options {
     display: block !important;
 }
+
+div#action-area {
+    text-align: left;
+}
+pre.page-source-code {
+    text-align: left;
+    white-space: pre-wrap;
+    word-break: break-all;
+}

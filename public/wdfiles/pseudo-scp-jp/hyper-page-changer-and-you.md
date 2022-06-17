@@ -1,3 +1,9 @@
+---
+title: "単一遷移構文とあなた"
+createdBy: "RTa_technology"
+originUrl: "http://pseudo-scp-jp.wikidot.com/hyper-page-changer-and-you"
+tags: ["エッセイ", "rta-technology"]
+---
 [[div_ class="breadcrumbs"]]
 [http://scp-jp.wikidot.com/other-link-hub お役立ちリンク集] » [http://scp-jp.wikidot.com/advanced-formatting-and-you 高度なフォーマットとあなた] » [http://scp-jp.wikidot.com/listpages-magic-and-you ListPagesの魔法とあなた] >> 単一ページ遷移構文とあなた
 [[/div]]
