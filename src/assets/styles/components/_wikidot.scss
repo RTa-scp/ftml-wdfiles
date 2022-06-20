@@ -117,6 +117,10 @@ a.footnoteref {
     display: inline-block;
 }
 
+#main-content .page-tags a[class^="_"] {
+    display: none;
+}
+
 a#account-topbutton:active + div#account-options,
 a#account-topbutton:focus + div#account-options {
     display: block !important;
