@@ -4,7 +4,6 @@ import Pages from "vite-plugin-pages"
 import Components from "unplugin-vue-components/vite"
 import Markdown from "vite-plugin-md"
 import matter from "gray-matter"
-import IconsResolver from "unplugin-icons/resolver"
 import fm from "front-matter"
 import yaml, { dump } from "js-yaml"
 import AutoImport from "unplugin-auto-import/vite"
@@ -39,10 +38,10 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-md
     Markdown({
       wrapperComponent: "post",
+      include: [/\.ftml$/, /\.md$/],
       transforms: {
         before: (content) => {
           const res = fm(content)
-          // console.log(res.attributes, res.body)
           const mdencodecontent = encodeURIComponent(res.body)
           const mdfrontmatterstr = "---\n"+dump(res.attributes,{forceQuotes: true})+"---\n"
           const mdcontent = mdfrontmatterstr+mdencodecontent

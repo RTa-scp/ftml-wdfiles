@@ -46,7 +46,7 @@ if (typeof window !== "undefined") {
   
 }
 
-fetch(url+".md")
+fetch(url+".ftml")
 .then(response => response.text())
 .then(data => {
   fm.postMessage(data)
