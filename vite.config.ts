@@ -60,6 +60,11 @@ export default defineConfig({
           dir: "public/wdfiles",
           baseRoute: "wdfiles",
         },
+        {
+          dir: "src/pages/user",
+          baseRoute: "user:info",
+          template: "src/pages/user/user.html",
+        }
       ],
       extensions: ["vue", "ftml", "md"],
       extendRoute(route) {
