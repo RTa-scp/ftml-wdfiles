@@ -8,10 +8,8 @@ onmessage = async (e) => {
         html,
         styles
     } = ftml.renderHTML(ftmlSource);
-    const type = e.data.type;
     postMessage({
         html,
-        styles,
-        type
+        styles
     });
 }
