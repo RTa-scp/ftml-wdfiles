@@ -63,7 +63,6 @@ export default defineConfig({
         {
           dir: "src/pages/user",
           baseRoute: "user:info",
-          template: "src/pages/user/user.html",
         }
       ],
       extensions: ["vue", "ftml", "md"],
