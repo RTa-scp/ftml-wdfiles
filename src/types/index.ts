@@ -5,8 +5,7 @@ export type UserModule = (ctx: ViteSSGContext) => void
 export interface DataShare {
   icon: string
   url: string
-  name: string
-  title?: string
+  title: string
   description?: string
   quote?: string
   hashtags?: string
@@ -18,7 +17,7 @@ export interface DataShare {
 export interface RelatedArticles {
   limit: number
   tags: Array<string>
-  name: string
+  title: string
 }
 
 export interface PaginateData {

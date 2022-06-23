@@ -19,7 +19,6 @@ export const getArticles = (limit?: number) => {
   const isPosts = getDataRoutes()
     .filter((data) => Object.keys(data.meta).length !== 0)
     .slice(0, limit)
-    .sort((a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date))
   return isPosts
 }
 
@@ -28,7 +27,6 @@ export const latestArticle = () => {
   const frontmatter = getDataRoutes()
     .filter((data) => data.meta.frontmatter !== undefined)
     .map((data) => data.meta.frontmatter)
-    .sort((a, b) => +new Date(b.date) - +new Date(a.date))
   const latestPost: unknown = frontmatter[0]
   return latestPost
 }
@@ -46,16 +44,16 @@ export const getArticlesTags = (tags: Array<string>) => {
 export const getArticlesSearch = (tags: Array<string>) => {
   const isPosts = getDataRoutes().filter((data) => Object.keys(data.meta).length !== 0)
   const filter = isPosts.filter((tag: any) =>
-    tags.every((filter) => tag.meta.frontmatter.name.includes(filter)),
+    tags.every((filter) => tag.meta.frontmatter.title.includes(filter)),
   )
   return filter
 }
 
 // Filter data to get related articles data
-export const getRelatedArticles = ({ limit, tags, name }: RelatedArticles) => {
+export const getRelatedArticles = ({ limit, tags, title }: RelatedArticles) => {
   const isPosts = getDataRoutes()
     .filter((data) => Object.keys(data.meta).length !== 0)
-    .filter((data: any) => data.meta.frontmatter.name !== name)
+    .filter((data: any) => data.meta.frontmatter.title !== title)
     .slice(0, limit)
   const filter = isPosts.filter((tag: any) =>
     tags.some((filter) => tag.meta.frontmatter.tags.includes(filter)),
