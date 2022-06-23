@@ -5,9 +5,10 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    Article: typeof import('./src/components/Articles/Article.vue')['default']
     Footer: typeof import('./src/components/Navigation/Footer.vue')['default']
     Header: typeof import('./src/components/Navigation/Header.vue')['default']
+    ListPages: typeof import('./src/components/Articles/ListPages.vue')['default']
+    ListTables: typeof import('./src/components/Articles/ListTables.vue')['default']
     Paginate: typeof import('./src/components/Pagination/Paginate.vue')['default']
     Post: typeof import('./src/components/Articles/Post.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -60,7 +60,7 @@ fetch(url+".ftml")
   fm.postMessage(data)
   document.querySelector("#page-title")!.textContent = frontmatter.title
   for (const tag of frontmatter.tags) {
-    document.querySelector("#main-content > div.page-tags > span")!.innerHTML += `<a href="javascript:;" class="${tag}">${tag}</a> `
+    document.querySelector("#main-content > div.page-tags > span")!.innerHTML += `<a href="/system:page-tags/tag/${tag}#${tag}" class="${tag}">${tag}</a> `
   }
   document.querySelector("#action-area > div > pre")!.textContent = data
   // ftml.postMessage(data)

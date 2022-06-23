@@ -43,7 +43,7 @@ const clickEndPage = () => {
                 <th>Site</th>
                 <th style="width: 20%;">Tag</th>
                 </tr>
-                <Article
+                <ListTables
                 v-for="(data, i) in articles.listArticles"
                 :key="i"
                 :siteUnixName="data.meta.frontmatter.siteUnixName"

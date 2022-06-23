@@ -63,6 +63,10 @@ export default defineConfig({
         {
           dir: "src/pages/user",
           baseRoute: "user:info",
+        },
+        {
+          dir: "src/pages/tags",
+          baseRoute: "system:page-tags/tag",
         }
       ],
       extensions: ["vue", "ftml", "md"],
