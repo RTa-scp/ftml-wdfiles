@@ -29,16 +29,11 @@ const clickEndPage = () => {
   <div id="content-wrap">
     <Side />
     <div id="main-content">
+      <div id="page-title">All Articles</div>
       <div id="page-content">
-        <div>
-            <h1>
-            All Articles
-            </h1>
-            <h3>
-            Total articles: {{ getArticles().length }}
-            </h3>
-        </div>
-
+        <h3>
+        Total articles: {{ getArticles().length }}
+        </h3>
         <div class="list-pages-box">
             <table class="wiki-content-table">
             <tbody>
