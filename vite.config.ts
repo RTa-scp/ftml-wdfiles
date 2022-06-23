@@ -72,7 +72,7 @@ export default defineConfig({
         const path = resolve(__dirname, route.component.slice(1))
         const md = readFileSync(path, "utf-8")
         const { data } = matter(md)
-        if (path.split(".").pop() == "md") {
+        if (path.split(".").pop() == "ftml") {
           route.meta = Object.assign(route.meta || {}, { frontmatter: data})
         }
       },

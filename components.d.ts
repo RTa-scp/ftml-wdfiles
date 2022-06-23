@@ -5,6 +5,7 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Article: typeof import('./src/components/Articles/Article.vue')['default']
     Footer: typeof import('./src/components/Navigation/Footer.vue')['default']
     Header: typeof import('./src/components/Navigation/Header.vue')['default']
     Paginate: typeof import('./src/components/Pagination/Paginate.vue')['default']
@@ -12,6 +13,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Side: typeof import('./src/components/Navigation/Side.vue')['default']
+    Tag: typeof import('./src/components/customcomponent/Tag.vue')['default']
     Top: typeof import('./src/components/Navigation/Top.vue')['default']
   }
 }

@@ -10,7 +10,8 @@ import path from "path/posix";
 
 const { frontmatter } = defineProps<{ frontmatter: any}>()
 
-// console.log(frontmatter)
+
+console.log(frontmatter)
 
 let ftml = new Worker(ftmlWorker, {
   type: 'module',
