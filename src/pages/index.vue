@@ -47,7 +47,6 @@ const clickEndPage = () => {
                 <th>CreatedBy</th>
                 <th>Site</th>
                 <th>Tag</th>
-                <th>originUrl</th>
                 </tr>
                 <Article
                 v-for="(data, i) in articles.listArticles"
@@ -58,7 +57,6 @@ const clickEndPage = () => {
                 :to="data.path"
                 :to-tags="`/system:page-tags/tag/${data.meta.frontmatter.tags}`"
                 :createdBy="data.meta.frontmatter.createdBy"
-                :originUrl="data.meta.frontmatter.originUrl"
                 />
             </tbody>
             </table>
