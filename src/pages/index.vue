@@ -46,7 +46,7 @@ const clickEndPage = () => {
                 <th>Title</th>
                 <th>CreatedBy</th>
                 <th>Site</th>
-                <th>Tag</th>
+                <th style="width: 20%;">Tag</th>
                 </tr>
                 <Article
                 v-for="(data, i) in articles.listArticles"
