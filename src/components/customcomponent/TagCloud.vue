@@ -5,7 +5,7 @@ const tags = getAlltags();
 </script>
 <style>
 /* modules */
-@import url(http://d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--modules/css/wiki/pagestagcloud/PagesTagCloudModule.css);
+@import url(https://d3g0gp89917ko0.cloudfront.net/v--291054f06006/common--modules/css/wiki/pagestagcloud/PagesTagCloudModule.css);
 .pages-tag-cloud-box {
     word-break: break-all;
 }
