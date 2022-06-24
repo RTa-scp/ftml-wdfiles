@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     Side: typeof import('./src/components/Navigation/Side.vue')['default']
     Tag: typeof import('./src/components/customcomponent/Tag.vue')['default']
+    TagCloud: typeof import('./src/components/customcomponent/TagCloud.vue')['default']
     Top: typeof import('./src/components/Navigation/Top.vue')['default']
   }
 }

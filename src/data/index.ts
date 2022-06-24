@@ -40,6 +40,16 @@ export const getArticlesTags = (tags: Array<string>) => {
   return filter
 }
 
+// Get All tags (How many articles each tag is used in)
+
+export const getAlltags = () => {
+  const isPosts = getDataRoutes().filter((data) => Object.keys(data.meta).length !== 0)
+  const tags = isPosts.map((tag: any) => tag.meta.frontmatter.tags)
+  const allTags = [].concat(...tags)
+  const uniqueTags = [...new Set(allTags)]
+  return uniqueTags
+}
+
 // Filter data to get data of search
 export const getArticlesSearch = (tags: Array<string>) => {
   const isPosts = getDataRoutes().filter((data) => Object.keys(data.meta).length !== 0)

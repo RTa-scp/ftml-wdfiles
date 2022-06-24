@@ -33,9 +33,12 @@ const clickEndPage = () => {
   <div id="content-wrap">
     <Side />
     <div id="main-content">
+      <div id="page-title">Page Tags</div>
       <div id="page-content">
         <div style="float:right; width: 50%;">
-          <div class="pages-tag-cloud-box"></div>
+          <div class="pages-tag-cloud-box">
+            <TagCloud />
+          </div>
         </div>
         <h2>
           List of pages tagged with {{ paramsTag }} ({{ tags.length }}):
