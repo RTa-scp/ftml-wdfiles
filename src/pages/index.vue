@@ -52,6 +52,7 @@ const clickEndPage = () => {
                 :to="data.path"
                 :to-tags="`/system:page-tags/tag/${data.meta.frontmatter.tags}`"
                 :createdBy="data.meta.frontmatter.createdBy"
+                :createdByUnixName="data.meta.frontmatter.createdByUnixName"
                 />
             </tbody>
             </table>
