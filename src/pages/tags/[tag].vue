@@ -2,6 +2,7 @@
 <script setup lang="ts">
 import { getArticlesTags, getParams, paginateData } from "~/data"
 import { slug, limitString } from "~/utils"
+import TagDescription from "~/components/customcomponent/TagDescription.vue";
 
 const paramsTag: any = getParams("tag")
 
@@ -35,6 +36,7 @@ const clickEndPage = () => {
     <div id="main-content">
       <div id="page-title">Page Tags</div>
       <div id="page-content">
+        <TagDescription />
         <div style="float:right; width: 50%;">
           <div class="pages-tag-cloud-box">
             <TagCloud />
