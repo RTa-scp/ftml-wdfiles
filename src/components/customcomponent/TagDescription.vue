@@ -20,6 +20,9 @@ fetch(jsonurl)
     ftml.postMessage(tags[0].desc)
   } else {
     console.log("No match")
+    document.querySelector("div.tag-desc > div.tag-desc-title > h2 > span > span.tag-desc.tag")!.textContent =""
+    document.querySelector("div.tag-desc > div.tag-desc-title > h2 > span > span.tag-desc.category")!.textContent =""
+    ftml.postMessage("")
   }
 });
 
