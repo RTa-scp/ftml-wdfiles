@@ -11,6 +11,7 @@ declare module '@vue/runtime-core' {
     ListTables: typeof import('./src/components/Articles/ListTables.vue')['default']
     Paginate: typeof import('./src/components/Pagination/Paginate.vue')['default']
     Post: typeof import('./src/components/Articles/Post.vue')['default']
+    RevTables: typeof import('./src/components/Articles/RevTables.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Side: typeof import('./src/components/Navigation/Side.vue')['default']

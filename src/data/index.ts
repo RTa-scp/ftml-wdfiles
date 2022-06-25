@@ -22,6 +22,13 @@ export const getArticles = (limit?: number) => {
   return isPosts
 }
 
+// Filter data routes to get the articles by createdby data and limit as needed
+export const getArticlesByCreatedBy = (createdby: string, limit?: number) => {
+  const isPosts = getDataRoutes().filter((data) => Object.keys(data.meta).length !== 0)
+  const filter = isPosts.filter((data) => data.meta.frontmatter.createdByUnixName === createdby).slice(0, limit)
+  return filter
+}
+
 // Get the latest article
 export const latestArticle = () => {
   const frontmatter = getDataRoutes()
