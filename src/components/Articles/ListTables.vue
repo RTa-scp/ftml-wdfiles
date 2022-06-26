@@ -7,7 +7,6 @@ const props = defineProps<{
   siteUnixName: string;
   to: string;
   toTags: string;
-  originUrl: string;
 }>();
 </script>
 
