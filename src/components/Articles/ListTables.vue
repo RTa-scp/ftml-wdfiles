@@ -13,7 +13,7 @@ const props = defineProps<{
 
 <template>
     <tr>
-        <td><router-link :to="to">{{ $props.title }}</router-link></td>
+        <td><a :href="to">{{ $props.title }}</a></td>
         <td><a :href="`/user:info/${createdByUnixName}`">{{ $props.createdBy }}</a></td>
         <td>{{ $props.siteUnixName}}</td>
         <td><Tag :tags="$props.tags"/></td>
