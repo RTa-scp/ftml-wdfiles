@@ -31,7 +31,7 @@
     "unplugin-vue-components": "^0.19.6",
     "vite": "^2.9.12",
     "vite-plugin-commonjs-externals": "^0.1.1",
-    "vite-plugin-md": "0.15.0",
+    "vite-plugin-md": "0.20.2",
     "vite-plugin-pages": "^0.24.2",
     "vite-ssg": "^0.20.1",
     "vue": "^3.2.37",
