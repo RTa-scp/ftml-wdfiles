@@ -26,7 +26,7 @@ ftml.onmessage = (event: MessageEvent) => {
   const {html, styles } = event.data;
   const pageContent = document.getElementById('page-content')!;
   const pageStyles = document.getElementById('page-styles')!;
-  pageContent.innerHTML = html.replace("\<wj-body class=\"wj-body\"\>", "").replace("\<\/wj-body\>", "");
+  pageContent.innerHTML = html.replace("\<wj-body class=\"wj-body\"\>", "").replace("\<\/wj-body\>", "").replace('crossorigin=""', "");
   
   if (styles.length > 0) {
     pageStyles.innerHTML = styles.map((v: string) => `<style>\n${v.replace(/\\</g, '&lt;')}\n</style>`).join("\n\n");
